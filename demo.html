@@ -298,7 +298,7 @@
   function update() {
     var d = build();
     var ready = !!d.name;
-    $('photo-row').hidden = form.elements.team.value !== 'single';
+    $('photo-row').hidden = true; // Pearl Street always shows the drawn placeholder, never a stock portrait
     phoneNote();
     $('o-name').textContent = d.full || 'Pearl Street Dental';
     $('o-place').textContent = ready ? ([val('area'), val('town')].filter(Boolean).join(', ') || 'Add the town') : 'Type a clinic name to start';

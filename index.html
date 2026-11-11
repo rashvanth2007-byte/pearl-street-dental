@@ -217,10 +217,17 @@
       </p>
     </div>
 
-    <!-- EDIT: the dentist tile (single-dentist clinics). Use the dentist's own photo (square, about 200 × 200).
+    <!-- EDIT: the dentist tile (single-dentist clinics). The drawn person is a placeholder that takes the
+         theme colour. For a client, replace the whole <span class="avatar">…</span> with the dentist's own
+         photo: <img src="assets/img/dentist.jpg" alt="" width="200" height="200"> (square, about 200 × 200).
          In demo links the name and degree come from the link. -->
     <a class="tile tile--who" href="#doctors" data-if="!specialists" data-intro>
-      <img src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=200&h=200&q=78&auto=format&fit=crop&crop=faces" alt="" width="200" height="200">
+      <span class="avatar" aria-hidden="true">
+        <svg viewBox="0 0 64 64" focusable="false">
+          <g class="avatar__person"><circle cx="32" cy="25" r="10.5"/><path d="M10 64c1.500-14 10-21.500 22-21.500S52.500 50 54 64z"/></g>
+          <circle class="avatar__ring" cx="32" cy="32" r="30"/>
+        </svg>
+      </span>
       <span>
         <strong data-site="doctorName">Dr. Kavya Raman</strong>
         <span class="who__qual" data-site="doctorQualification">BDS · 14 years in practice</span>
@@ -653,10 +660,8 @@
          Replace the real number inside each <span class="doctor__reg" data-sample> (data-sample lines are hidden in demo links). -->
     <div class="doctor-grid contact-sheet">
       <article class="doctor">
-        <figure class="doctor__photo">
-          <img src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=600&h=600&q=80&auto=format&fit=crop&crop=faces"
-             srcset="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=380&h=380&q=78&auto=format&fit=crop&crop=faces 380w, https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=600&h=600&q=80&auto=format&fit=crop&crop=faces 600w"
-             sizes="180px" alt="Portrait of Dr. Kavya Raman" loading="lazy" width="600" height="600">
+        <figure class="doctor__photo doctor__photo--placeholder">
+          <img src="assets/img/doctor-silhouette.svg" alt="Dentist photo placeholder" loading="lazy" width="600" height="600">
         </figure>
         <div class="doctor__body">
           <h3 data-site="doctorName">Dr. Kavya Raman</h3>
